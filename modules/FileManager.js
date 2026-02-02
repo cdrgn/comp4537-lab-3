@@ -5,5 +5,5 @@ exports.writeToFile = function(fileName, text, callback) {
 }
 
 exports.readFromFile = function(fileName, callback) {
-    fs.readFile(fileName, (err, data) => callback(err, data)); // readFile returns 2 args, null/error obj and file contents/undefined
+    fs.readFile(fileName, 'utf8', (err, data) => callback(err, data)); // readFile returns 2 args, null/error obj and file contents/undefined
 }
